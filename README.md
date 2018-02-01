@@ -89,7 +89,7 @@ More details can be found in the [DigitalOcean Documentation](https://www.digita
 
 It is a good idea to install `nvm` rather than `node` first. This will allow you to manage different versions of `node` on the same machine. Follow the [instructions](https://github.com/creationix/nvm) provided by the `nvm` developers. If you type `nvm` and it doesn't work you likely have to restart the terminal session to load it up. The `nvm` instructions that get ouput after install, explain ths. Once nvm is installed install node `nvm install v8.7.0` (or whatever version you want).
 
-Once `node` is install you can install the dependencies with `npm i` and then build the production assets with `npm run prod:build`. A simple way to run the server is with `NODE_ENV=production node server` from the chatty-redux root directory. The server is now listening on port 3000.
+Once `node` is installed you can install the dependencies with `npm i` and then build the production assets with `npm run prod:build`. A simple way to run the server is with `npm run prod:server` from the chatty-redux root directory. The server is now listening on port 3000.
 
 ### nginx
 
@@ -106,7 +106,7 @@ More details can be found in the [DigitalOcean Documentation](https://www.digita
 
 > You may need to open up some ports on your server for nginx to work. Some providers are a lot more strict and close everything.
 
-Once nginx is installed you will want to setup the proxy for the node application. More details can be found in the [DigitalOcean Documentation)[https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04].
+Once nginx is installed you will want to setup the proxy for the node application. More details can be found in the [DigitalOcean Documentation](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04)
 
 Modify `/etc/nginx/sites-available/default` to include the proxy configuration for your app. Make sure the port is correct.
 
